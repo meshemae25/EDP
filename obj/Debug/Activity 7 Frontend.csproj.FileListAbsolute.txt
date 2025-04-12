@@ -1,0 +1,11 @@
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\bin\Debug\Activity 7 Frontend.exe.config
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\bin\Debug\Activity 7 Frontend.exe
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\bin\Debug\Activity 7 Frontend.pdb
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity 7 Frontend.csproj.AssemblyReference.cache
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity_7_Frontend.Form1.resources
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity_7_Frontend.Properties.Resources.resources
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity 7 Frontend.csproj.GenerateResource.cache
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity 7 Frontend.csproj.CoreCompileInputs.cache
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity 7 Frontend.exe
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\Activity 7 Frontend.pdb
+C:\Users\Meshe Mae\source\repos\Activity 7 Frontend\Activity 7 Frontend\obj\Debug\ShoeCollection.Form1.resources
