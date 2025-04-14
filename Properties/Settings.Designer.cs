@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Activity_7_Frontend.Properties
+namespace Shoe_Collection.Properties
 {
 
 
