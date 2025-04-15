@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Shoe_Collection
 {
-    public partial class Suppliers : Form
+    public partial class Shoe_Owner : Form
     {
-        public Suppliers()
+        public Shoe_Owner()
         {
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }
