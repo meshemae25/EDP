@@ -22,49 +22,57 @@ namespace Shoe_Collection
         {
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void btnshoes_Click(object sender, EventArgs e)
         {
-
+            frmShoes frmShoes = new frmShoes();
+            frmShoes.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnsupplier_Click(object sender, EventArgs e)
         {
-
+            frmsupplier frmsupplier = new frmsupplier();
+            frmsupplier.ShowDialog();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void btnowner_Click(object sender, EventArgs e)
         {
-
+            frmowner frmowner = new frmowner();
+            frmowner.ShowDialog();
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
+            frmorders frmorders = new frmorders();
+            frmorders.ShowDialog();
         }
 
-        private void label9_Click(object sender, EventArgs e)
+        private void btnshoesupplier_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            frmshoesupplier frmshoesupplier = new frmshoesupplier();
+            frmshoesupplier.ShowDialog();
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            frmshoeowner frmshoeowner = new frmshoeowner();
+            frmshoeowner.ShowDialog();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void btnshoeowner_Click(object sender, EventArgs e)
         {
+            frmshoeowner frmshoeowner1 = new frmshoeowner();
+        }
 
+        private void btnorderitems_Click(object sender, EventArgs e)
+        {
+            frmorderitems frmorderitems = new frmorderitems();
+            frmorderitems.ShowDialog();
         }
     }
 }

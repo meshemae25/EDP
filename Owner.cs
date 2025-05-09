@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shoe_Collection
 {
-    public partial class Owner : Form
+    public partial class frmowner : Form
     {
-        public Owner()
+        public frmowner()
         {
             InitializeComponent();
         }

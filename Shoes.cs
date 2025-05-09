@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Shoe_Collection
 {
-    public partial class Shoes : Form
+    public partial class frmShoes : Form
     {
-        public Shoes()
+        public frmShoes()
         {
             InitializeComponent();
         }

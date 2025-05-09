@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Shoe_Collection
 {
-    public partial class Shoe_Owner : Form
+    public partial class frmshoeowner : Form
     {
-        public Shoe_Owner()
+        public frmshoeowner()
         {
             InitializeComponent();
         }
@@ -20,6 +21,16 @@ namespace Shoe_Collection
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Shoe_Owner_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }
