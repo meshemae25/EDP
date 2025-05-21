@@ -30,64 +30,58 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.txtstock = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtprice = new System.Windows.Forms.TextBox();
+            this.txtcolor = new System.Windows.Forms.TextBox();
+            this.txtsize = new System.Windows.Forms.TextBox();
+            this.txtmodel = new System.Windows.Forms.TextBox();
+            this.txtbrand = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtShoeid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dgvShoes = new System.Windows.Forms.DataGridView();
+            this.btnexport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShoes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.btnexport);
             this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textBox7);
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
+            this.panel1.Controls.Add(this.btnAdd);
+            this.panel1.Controls.Add(this.txtstock);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtprice);
+            this.panel1.Controls.Add(this.txtcolor);
+            this.panel1.Controls.Add(this.txtsize);
+            this.panel1.Controls.Add(this.txtmodel);
+            this.panel1.Controls.Add(this.txtbrand);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtShoeid);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 56);
             this.panel1.Name = "panel1";
@@ -103,56 +97,60 @@
             this.label12.TabIndex = 18;
             this.label12.Text = "Size";
             // 
-            // button4
+            // btnClear
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button4.Location = new System.Drawing.Point(206, 301);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(52, 23);
-            this.button4.TabIndex = 16;
-            this.button4.Text = "Clear";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnClear.Location = new System.Drawing.Point(206, 301);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(52, 23);
+            this.btnClear.TabIndex = 16;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.OrangeRed;
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(143, 301);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(52, 23);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Location = new System.Drawing.Point(143, 301);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(52, 23);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(76, 301);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(76, 301);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(52, 23);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+           
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkTurquoise;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(12, 301);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Location = new System.Drawing.Point(12, 301);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(52, 23);
+            this.btnAdd.TabIndex = 0;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // textBox7
+            // txtstock
             // 
-            this.textBox7.Location = new System.Drawing.Point(81, 261);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(160, 20);
-            this.textBox7.TabIndex = 13;
+            this.txtstock.Location = new System.Drawing.Point(81, 261);
+            this.txtstock.Name = "txtstock";
+            this.txtstock.Size = new System.Drawing.Size(160, 20);
+            this.txtstock.TabIndex = 13;
             // 
             // label8
             // 
@@ -163,40 +161,40 @@
             this.label8.TabIndex = 12;
             this.label8.Text = "Stock";
             // 
-            // textBox6
+            // txtprice
             // 
-            this.textBox6.Location = new System.Drawing.Point(81, 226);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(160, 20);
-            this.textBox6.TabIndex = 11;
+            this.txtprice.Location = new System.Drawing.Point(81, 226);
+            this.txtprice.Name = "txtprice";
+            this.txtprice.Size = new System.Drawing.Size(160, 20);
+            this.txtprice.TabIndex = 11;
             // 
-            // textBox5
+            // txtcolor
             // 
-            this.textBox5.Location = new System.Drawing.Point(81, 195);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(160, 20);
-            this.textBox5.TabIndex = 10;
+            this.txtcolor.Location = new System.Drawing.Point(81, 195);
+            this.txtcolor.Name = "txtcolor";
+            this.txtcolor.Size = new System.Drawing.Size(160, 20);
+            this.txtcolor.TabIndex = 10;
             // 
-            // textBox4
+            // txtsize
             // 
-            this.textBox4.Location = new System.Drawing.Point(81, 164);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(160, 20);
-            this.textBox4.TabIndex = 9;
+            this.txtsize.Location = new System.Drawing.Point(81, 164);
+            this.txtsize.Name = "txtsize";
+            this.txtsize.Size = new System.Drawing.Size(160, 20);
+            this.txtsize.TabIndex = 9;
             // 
-            // textBox3
+            // txtmodel
             // 
-            this.textBox3.Location = new System.Drawing.Point(81, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 20);
-            this.textBox3.TabIndex = 8;
+            this.txtmodel.Location = new System.Drawing.Point(81, 132);
+            this.txtmodel.Name = "txtmodel";
+            this.txtmodel.Size = new System.Drawing.Size(160, 20);
+            this.txtmodel.TabIndex = 8;
             // 
-            // textBox2
+            // txtbrand
             // 
-            this.textBox2.Location = new System.Drawing.Point(81, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 7;
+            this.txtbrand.Location = new System.Drawing.Point(81, 97);
+            this.txtbrand.Name = "txtbrand";
+            this.txtbrand.Size = new System.Drawing.Size(160, 20);
+            this.txtbrand.TabIndex = 7;
             // 
             // label7
             // 
@@ -242,14 +240,13 @@
             this.label2.Size = new System.Drawing.Size(43, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "ShoeID";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox1
+            // txtShoeid
             // 
-            this.textBox1.Location = new System.Drawing.Point(81, 60);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtShoeid.Location = new System.Drawing.Point(81, 60);
+            this.txtShoeid.Name = "txtShoeid";
+            this.txtShoeid.Size = new System.Drawing.Size(160, 20);
+            this.txtShoeid.TabIndex = 0;
             // 
             // label1
             // 
@@ -264,100 +261,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Lavender;
-            this.panel2.Controls.Add(this.tableLayoutPanel1);
+            this.panel2.Controls.Add(this.dgvShoes);
             this.panel2.Controls.Add(this.label9);
             this.panel2.Location = new System.Drawing.Point(264, 56);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(529, 390);
             this.panel2.TabIndex = 1;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 7;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.90625F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.09375F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 67F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel1.Controls.Add(this.label16, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label15, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label14, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label13, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label5, 3, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(16, 48);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.62626F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.37374F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(492, 198);
-            this.tableLayoutPanel1.TabIndex = 18;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(43, 13);
-            this.label16.TabIndex = 19;
-            this.label16.Text = "ShoeID";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(423, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 13);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Stock";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(353, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(31, 13);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Price";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(286, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 13);
-            this.label13.TabIndex = 19;
-            this.label13.Text = "Color";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(148, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(36, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Model";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(81, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 13);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Brand";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(218, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Size";
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label9
             // 
@@ -377,6 +287,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(793, 52);
             this.panel3.TabIndex = 2;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label17
             // 
@@ -388,7 +299,26 @@
             this.label17.Size = new System.Drawing.Size(129, 17);
             this.label17.TabIndex = 19;
             this.label17.Text = "Shoes Management";
-            this.label17.Click += new System.EventHandler(this.label17_Click);
+            // 
+            // dgvShoes
+            // 
+            this.dgvShoes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShoes.Location = new System.Drawing.Point(16, 41);
+            this.dgvShoes.Name = "dgvShoes";
+            this.dgvShoes.Size = new System.Drawing.Size(497, 309);
+            this.dgvShoes.TabIndex = 18;
+            // 
+            // btnexport
+            // 
+            this.btnexport.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnexport.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnexport.Location = new System.Drawing.Point(102, 330);
+            this.btnexport.Name = "btnexport";
+            this.btnexport.Size = new System.Drawing.Size(52, 23);
+            this.btnexport.TabIndex = 19;
+            this.btnexport.Text = "Export";
+            this.btnexport.UseVisualStyleBackColor = false;
+            this.btnexport.Click += new System.EventHandler(this.btnexport_Click);
             // 
             // frmShoes
             // 
@@ -405,10 +335,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShoes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -419,34 +348,27 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtShoeid;
+        private System.Windows.Forms.TextBox txtstock;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtprice;
+        private System.Windows.Forms.TextBox txtcolor;
+        private System.Windows.Forms.TextBox txtsize;
+        private System.Windows.Forms.TextBox txtmodel;
+        private System.Windows.Forms.TextBox txtbrand;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label17;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView dgvShoes;
+        private System.Windows.Forms.Button btnexport;
     }
 }

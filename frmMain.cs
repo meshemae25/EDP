@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Shoe_Collection
 {
@@ -20,9 +14,79 @@ namespace Shoe_Collection
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            LoadShoesData();
+            LoadOrderItemsData();
+            LoadOwnerSalesData();
+        }
+
+        private void LoadShoesData()
+        {
+            try
+            {
+                string connectionString = "server=localhost;user=root;password=;database=shoecollectiondb;";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM shoes";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    dgvrecentlyact.AutoGenerateColumns = true;
+                    dgvrecentlyact.DataSource = table;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading shoes data: " + ex.Message);
+            }
+        }
+
+        private void LoadOrderItemsData()
+        {
+            try
+            {
+                string connectionString = "server=localhost;user=root;password=;database=shoecollectiondb;";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT * FROM recentorders"; 
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    dgvorderitems.AutoGenerateColumns = true;
+                    dgvorderitems.DataSource = table;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading order items: " + ex.Message);
+            }
+        }
+
+        private void LoadOwnerSalesData()
+        {
+            try
+            {
+                string connectionString = "server=localhost;user=root;password=;database=shoecollectiondb;";
+                using (MySqlConnection conn = new MySqlConnection(connectionString))
+                {
+                    string query = "SELECT owner_id, calculate_owner_sales(owner_id) AS total_sales FROM shoeowners";
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(query, conn);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    dgvrecentlyact.DataSource = table; // Or create a new DataGridView for owner sales
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading owner sales data: " + ex.Message);
+            }
         }
 
 
+
+        // Menu + Button event handlers
         private void quitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,49 +94,60 @@ namespace Shoe_Collection
 
         private void btnshoes_Click(object sender, EventArgs e)
         {
-            frmShoes frmShoes = new frmShoes();
-            frmShoes.ShowDialog();
+            frmshoeslist frm = new frmshoeslist();
+            frm.ShowDialog();
         }
 
         private void btnsupplier_Click(object sender, EventArgs e)
         {
-            frmsupplier frmsupplier = new frmsupplier();
-            frmsupplier.ShowDialog();
+            frmsupplier frm = new frmsupplier();
+            frm.ShowDialog();
         }
 
         private void btnowner_Click(object sender, EventArgs e)
         {
-            frmowner frmowner = new frmowner();
-            frmowner.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmorders frmorders = new frmorders();
-            frmorders.ShowDialog();
+            frmownerlist frm = new frmownerlist();
+            frm.ShowDialog();
         }
 
         private void btnshoesupplier_Click(object sender, EventArgs e)
         {
-            frmshoesupplier frmshoesupplier = new frmshoesupplier();
-            frmshoesupplier.ShowDialog();
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            frmshoeowner frmshoeowner = new frmshoeowner();
-            frmshoeowner.ShowDialog();
+            frmshoesupplier frm = new frmshoesupplier();
+            frm.ShowDialog();
         }
 
         private void btnshoeowner_Click(object sender, EventArgs e)
         {
-            frmshoeowner frmshoeowner1 = new frmshoeowner();
+            frmshoeowner frm = new frmshoeowner();
+            frm.ShowDialog();
         }
 
         private void btnorderitems_Click(object sender, EventArgs e)
         {
-            frmorderitems frmorderitems = new frmorderitems();
-            frmorderitems.ShowDialog();
+            frmorderitems frm = new frmorderitems();
+            frm.ShowDialog();
+        }
+
+        private void btnorders_Click(object sender, EventArgs e)
+        {
+            frmorders frm = new frmorders();
+            frm.ShowDialog();
+        }
+
+        private void dgvrecentlyact_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmShoes frm = new frmShoes();
+            frm.ShowDialog();
+        }
+
+        private void recentlyactivity_Paint(object sender, PaintEventArgs e)
+        {
+            LoadShoesData();
+        }
+
+        private void orderitems_Paint(object sender, PaintEventArgs e)
+        {
+            LoadOrderItemsData();
         }
     }
 }

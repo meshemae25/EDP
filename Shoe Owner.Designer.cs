@@ -132,6 +132,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = false;
+  
             // 
             // textBox3
             // 
@@ -224,7 +225,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 56);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
@@ -274,7 +274,6 @@
             this.label9.Size = new System.Drawing.Size(46, 13);
             this.label9.TabIndex = 15;
             this.label9.Text = "Shoe ID";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -324,7 +323,6 @@
             this.Controls.Add(this.panel3);
             this.Name = "frmshoeowner";
             this.Text = "Shoe_Owner";
-            this.Load += new System.EventHandler(this.Shoe_Owner_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);

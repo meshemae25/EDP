@@ -15,7 +15,7 @@ namespace Shoe_Collection
     {
         public Login()
         {
-            InitializeComponent();  // THIS MUST BE HERE
+            InitializeComponent();  
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
@@ -34,12 +34,13 @@ namespace Shoe_Collection
 
 
                         cmd.Parameters.AddWithValue("@username", txtusername.Text);
-                        cmd.Parameters.AddWithValue("@password", txtpassword.Text); // Note: In real-world, hash passwords!
+                        cmd.Parameters.AddWithValue("@password", txtpassword.Text); 
 
                         int userExists = Convert.ToInt32(cmd.ExecuteScalar());
 
                         if (userExists > 0)
                         {
+                            conn.Close();
                             frmMain mainForm = new frmMain();
 
                             mainForm.Show();
@@ -60,6 +61,12 @@ namespace Shoe_Collection
         private void btncancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void forgetpass_Click(object sender, EventArgs e)
+        {
+            Forgot_Password forgotpasswordForm = new Forgot_Password();
+            forgotpasswordForm.ShowDialog();
         }
     }
 }

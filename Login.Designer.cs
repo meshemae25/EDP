@@ -37,6 +37,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btncancel = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.forgetpass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +55,7 @@
             this.btnlogin.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnlogin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnlogin.ForeColor = System.Drawing.Color.White;
-            this.btnlogin.Location = new System.Drawing.Point(497, 325);
+            this.btnlogin.Location = new System.Drawing.Point(497, 349);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(109, 23);
             this.btnlogin.TabIndex = 2;
@@ -125,13 +127,33 @@
             this.btncancel.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btncancel.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncancel.ForeColor = System.Drawing.Color.White;
-            this.btncancel.Location = new System.Drawing.Point(622, 325);
+            this.btncancel.Location = new System.Drawing.Point(622, 349);
             this.btncancel.Name = "btncancel";
             this.btncancel.Size = new System.Drawing.Size(109, 23);
             this.btncancel.TabIndex = 9;
             this.btncancel.Text = "&Cancel";
             this.btncancel.UseVisualStyleBackColor = false;
             this.btncancel.Click += new System.EventHandler(this.btncancel_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(497, 294);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Remember";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // forgetpass
+            // 
+            this.forgetpass.AutoSize = true;
+            this.forgetpass.Location = new System.Drawing.Point(648, 295);
+            this.forgetpass.Name = "forgetpass";
+            this.forgetpass.Size = new System.Drawing.Size(94, 13);
+            this.forgetpass.TabIndex = 11;
+            this.forgetpass.Text = "Forgot Password";
+            this.forgetpass.Click += new System.EventHandler(this.forgetpass_Click);
             // 
             // Login
             // 
@@ -140,6 +162,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(243)))), ((int)(((byte)(248)))));
             this.ClientSize = new System.Drawing.Size(816, 469);
             this.ControlBox = false;
+            this.Controls.Add(this.forgetpass);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btncancel);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label2);
@@ -176,5 +200,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btncancel;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label forgetpass;
     }
 }
